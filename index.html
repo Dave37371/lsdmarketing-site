@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LSD Marketing | Authority Architect</title>
+<meta name="description" content="AI-powered authority systems for established experts who are respected offline but invisible online.">
+
+<!-- Open Graph -->
+<meta property="og:title" content="LSD Marketing | Authority Architect">
+<meta property="og:description" content="AI-powered authority systems for established experts who are respected offline but invisible online.">
+<meta property="og:image" content="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/6a50441c467229729ef4229d.jpeg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lsdmarketing.com.au">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LSD Marketing | Authority Architect">
+<meta name="twitter:description" content="AI-powered authority systems for established experts who are respected offline but invisible online.">
+<meta name="twitter:image" content="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/6a50441c467229729ef4229d.jpeg">
+
+<link rel="icon" href="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/62194bd30a12a347bd7e1909.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --red:#CC0000;
+    --red-dark:#990000;
+    --black:#111111;
+    --white:#FFFFFF;
+    --radius:2px;
+    --nav-h:78px;
+  }
+
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth; scroll-padding-top:var(--nav-h);}
+  body{
+    margin:0;
+    background:var(--white);
+    color:var(--black);
+    font-family:'Lato',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3,h4{
+    font-family:'Bebas Neue',sans-serif;
+    font-weight:400;
+    margin:0;
+    letter-spacing:0.5px;
+  }
+  p{margin:0;}
+  ul{margin:0; padding:0;}
+
+  .container{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  ::selection{background:var(--red); color:var(--white);}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    display:inline-block;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:18px;
+    letter-spacing:2px;
+    padding:18px 42px;
+    border-radius:var(--radius);
+    border:2px solid transparent;
+    cursor:pointer;
+    transition:background-color .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+  }
+  .btn:hover{transform:translateY(-3px);}
+  .btn-red{background:var(--red); color:var(--white); border-color:var(--red);}
+  .btn-red:hover{background:var(--red-dark); border-color:var(--red-dark);}
+  .btn-white{background:var(--white); color:var(--red); border-color:var(--white);}
+  .btn-white:hover{background:var(--black); color:var(--white); border-color:var(--black);}
+  .btn-outline{background:transparent; color:var(--white); border-color:var(--white);}
+  .btn-outline:hover{background:var(--white); color:var(--black);}
+  .text-link{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:'Lato',sans-serif; font-weight:700;
+    border-bottom:2px solid var(--red);
+    padding-bottom:2px;
+    transition:opacity .2s ease, gap .2s ease;
+  }
+  .text-link:hover{opacity:0.75; gap:14px;}
+
+  /* ---------- NAV ---------- */
+  .nav{
+    position:sticky; top:0; z-index:100;
+    background:var(--black);
+    border-bottom:2px solid var(--black);
+    transition:padding .25s ease, border-color .25s ease;
+  }
+  .nav-inner{
+    max-width:1180px; margin:0 auto; padding:0 24px;
+    height:var(--nav-h);
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .nav-logo{
+    display:inline-flex; align-items:center;
+    background:var(--white);
+    padding:8px 12px;
+    border-radius:var(--radius);
+  }
+  .nav-logo img{height:32px; width:auto; display:block;}
+  .nav-links{
+    display:flex; align-items:center; gap:40px;
+    list-style:none; margin:0; padding:0;
+  }
+  .nav-links a{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:16px;
+    letter-spacing:1.5px;
+    color:var(--white);
+    position:relative;
+    padding-bottom:4px;
+  }
+  .nav-links a::after{
+    content:"";
+    position:absolute; left:0; bottom:0;
+    width:0%; height:2px; background:var(--red);
+    transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-cta{display:flex; align-items:center; gap:28px;}
+  .nav-cta .btn{padding:12px 26px; font-size:15px;}
+
+  .nav-toggle{
+    display:none;
+    background:none; border:2px solid var(--white); color:var(--white);
+    font-family:'Bebas Neue',sans-serif; font-size:14px; letter-spacing:2px;
+    padding:8px 16px; border-radius:var(--radius); cursor:pointer;
+  }
+
+  .mobile-menu{
+    position:fixed; inset:0; background:var(--black);
+    z-index:99;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:36px;
+    transform:translateY(-100%);
+    transition:transform .35s ease;
+  }
+  .mobile-menu.open{transform:translateY(0);}
+  .mobile-menu a{
+    font-family:'Bebas Neue',sans-serif; font-size:34px; letter-spacing:1.5px; color:var(--white);
+  }
+  .mobile-menu a:hover{color:var(--red);}
+
+  /* ---------- SECTIONS ---------- */
+  section{position:relative;}
+  .section-dark{background:var(--black); color:var(--white);}
+  .section-light{background:var(--white); color:var(--black);}
+  .section-red{background:var(--red); color:var(--white);}
+  .pad{padding:clamp(80px,12vw,150px) 0;}
+  .pad-sm{padding:clamp(56px,8vw,90px) 0;}
+
+  .eyebrow{
+    display:inline-block;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:14px;
+    letter-spacing:4px;
+    color:var(--red);
+    margin-bottom:18px;
+  }
+
+  .rule{
+    width:64px; height:3px; background:var(--red); border:none;
+    margin:0 0 28px 0;
+  }
+  .rule-full{width:100%; height:2px; background:var(--red); border:none; opacity:.25;}
+
+  /* ---------- REVEAL ---------- */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity .8s ease, transform .8s ease;
+  }
+  .reveal.visible{opacity:1; transform:none;}
+  .reveal-delay-1{transition-delay:.1s;}
+  .reveal-delay-2{transition-delay:.2s;}
+  .reveal-delay-3{transition-delay:.3s;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:var(--black); color:var(--white);
+    padding:clamp(70px,10vw,60px) 0 0 0;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    align-items:center;
+    gap:40px;
+    min-height:calc(100vh - var(--nav-h));
+  }
+  .hero h1{
+    font-size:clamp(46px,6.4vw,88px);
+    line-height:0.98;
+    margin-bottom:26px;
+  }
+  .hero h1 .accent{color:var(--red);}
+  .hero-sub{
+    font-size:clamp(17px,1.6vw,20px);
+    max-width:520px;
+    color:#cfcfcf;
+    margin-bottom:40px;
+  }
+  .hero-ctas{display:flex; flex-wrap:wrap; align-items:center; gap:28px;}
+  .hero-portrait{
+    position:relative;
+    justify-self:end;
+    width:100%;
+    max-width:460px;
+  }
+  .hero-portrait .frame{
+    border:2px solid var(--red);
+    padding:14px;
+    border-radius:var(--radius);
+  }
+  .hero-portrait img{
+    width:100%; height:auto; border-radius:var(--radius);
+    will-change:transform;
+  }
+
+  /* ---------- PROBLEM (whitespace lines) ---------- */
+  .lines{max-width:720px; margin:0 auto; text-align:center;}
+  .lines p{
+    font-family:'Lato',sans-serif;
+    font-size:clamp(19px,2.6vw,27px);
+    line-height:1.5;
+    margin:0 0 26px 0;
+  }
+  .lines p.emph{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(26px,3.6vw,38px);
+    letter-spacing:1px;
+    color:var(--red);
+    margin:38px 0 30px 0;
+  }
+  .lines p.final{font-weight:700;}
+
+  /* ---------- SHIFT / 3-BRAIN ---------- */
+  .shift-head{max-width:760px; margin:0 auto 70px auto; text-align:center;}
+  .shift-head h2{
+    font-size:clamp(34px,4.4vw,54px);
+    line-height:1.05;
+  }
+  .shift-head h2 span{color:var(--red);}
+  .shift-lead{
+    max-width:640px; margin:22px auto 0 auto;
+    color:#cfcfcf; font-size:18px;
+  }
+  .brains{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:0;
+    border-top:2px solid var(--red);
+  }
+  .brain{
+    padding:44px 32px;
+    border-bottom:1px solid #2b2b2b;
+    border-right:1px solid #2b2b2b;
+  }
+  .brain:last-child{border-right:none;}
+  .brain-tag{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:15px; letter-spacing:2px; color:var(--red); margin-bottom:14px;
+    display:block;
+  }
+  .brain h3{font-size:28px; margin-bottom:14px;}
+  .brain p{color:#cfcfcf; font-size:16px;}
+
+  /* ---------- SYSTEM (numbered) ---------- */
+  .steps{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:36px;
+  }
+  .step-num{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(70px,9vw,120px);
+    line-height:0.8;
+    color:var(--black);
+    margin-bottom:10px;
+  }
+  @supports (-webkit-text-stroke:2px black){
+    .step-num{ color:transparent; -webkit-text-stroke:2px var(--black); }
+  }
+  .step hr{margin:14px 0 16px 0;}
+  .step h3{font-size:24px; letter-spacing:1px; margin-bottom:10px;}
+  .step p{font-size:15.5px; color:#444;}
+
+  /* ---------- OFFERS ---------- */
+  .offers-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:28px;
+    align-items:stretch;
+  }
+  .offer-card{
+    border:2px solid #333;
+    border-radius:var(--radius);
+    padding:40px 32px;
+    display:flex; flex-direction:column;
+    background:var(--black);
+    transition:border-color .25s ease, transform .25s ease;
+    position:relative;
+  }
+  .offer-card:hover{border-color:var(--white); transform:translateY(-6px);}
+  .offer-card.featured{
+    border-color:var(--red);
+    background:#1a1a1a;
+  }
+  .offer-card.featured:hover{border-color:var(--red);}
+  .featured-tag{
+    position:absolute; top:-14px; left:32px;
+    background:var(--red); color:var(--white);
+    font-family:'Bebas Neue',sans-serif;
+    font-size:13px; letter-spacing:2px;
+    padding:6px 14px; border-radius:var(--radius);
+  }
+  .offer-name{font-size:26px; margin-bottom:6px; letter-spacing:1px;}
+  .offer-price{
+    font-family:'Bebas Neue',sans-serif;
+    font-size:44px; color:var(--red); margin-bottom:20px;
+  }
+  .offer-desc{color:#cfcfcf; font-size:16px; margin-bottom:8px;}
+  .offer-desc.strong{color:var(--white); font-weight:700; margin-bottom:32px;}
+  .offer-card .btn{margin-top:auto; text-align:center;}
+
+  /* ---------- TESTIMONIALS (reserved slot) ---------- */
+  .testimonials-slot{display:none;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:60px; align-items:center;
+  }
+  .about-photo{border:2px solid var(--black); border-radius:var(--radius); overflow:hidden;}
+  .about-photo img{width:100%; height:auto;}
+  .about-copy p{font-size:clamp(19px,2.2vw,24px); line-height:1.5; margin-bottom:22px;}
+  .about-copy p.final{color:var(--red); font-weight:700;}
+
+  /* ---------- LEAD MAGNET BANNER ---------- */
+  .banner-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:50px; align-items:center;
+  }
+  .banner-grid h2{
+    font-size:clamp(32px,4.2vw,52px); line-height:1.05; margin-bottom:20px;
+  }
+  .banner-grid .sub{font-size:18px; margin-bottom:32px; max-width:480px;}
+  .banner-img{border:2px solid var(--white); border-radius:var(--radius); overflow:hidden;}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:820px; margin:0 auto;}
+  .faq-item{
+    border-bottom:2px solid var(--black);
+    padding:26px 0;
+  }
+  .faq-item summary{
+    list-style:none; cursor:pointer;
+    display:flex; align-items:center; justify-content:space-between;
+    font-family:'Bebas Neue',sans-serif;
+    font-size:clamp(19px,2.2vw,24px);
+    letter-spacing:0.5px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-toggle{
+    font-family:'Lato',sans-serif; font-weight:900; font-size:24px; color:var(--red);
+    transition:transform .25s ease;
+    flex:0 0 auto; margin-left:20px;
+  }
+  .faq-item[open] .faq-toggle{transform:rotate(45deg);}
+  .faq-a{
+    font-size:16.5px; color:#333; margin-top:16px; max-width:680px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer{background:var(--black); color:var(--white); padding:70px 0 40px 0;}
+  .footer-top{
+    display:grid; grid-template-columns:1fr 1fr 1fr; gap:40px;
+    padding-bottom:48px; border-bottom:1px solid #2b2b2b; margin-bottom:34px;
+  }
+  .footer-logo{
+    display:inline-flex; align-items:center;
+    background:var(--white);
+    padding:8px 12px;
+    border-radius:var(--radius);
+    margin-bottom:18px;
+  }
+  .footer-logo img{height:30px; width:auto; display:block;}
+  .footer-col h4{
+    font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:2px; color:var(--red); margin-bottom:16px;
+  }
+  .footer-col p, .footer-col a{
+    display:block; font-size:15px; color:#cfcfcf; margin-bottom:10px;
+  }
+  .footer-col a:hover{color:var(--white);}
+  .footer-bottom{
+    display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .footer-copy{font-size:13px; color:#777;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .nav-links, .nav-cta .btn{display:none;}
+    .nav-toggle{display:inline-block;}
+    .hero-grid{grid-template-columns:1fr; min-height:auto; padding-bottom:60px;}
+    .hero-portrait{justify-self:center; order:-1; max-width:340px; margin-bottom:20px;}
+    .brains{grid-template-columns:1fr;}
+    .brain{border-right:none;}
+    .steps{grid-template-columns:1fr 1fr; row-gap:50px;}
+    .offers-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;}
+    .about-photo{max-width:420px; margin:0 auto;}
+    .banner-grid{grid-template-columns:1fr;}
+    .banner-img{order:-1; max-width:420px; margin:0 auto;}
+    .footer-top{grid-template-columns:1fr; gap:32px;}
+  }
+  @media (max-width:560px){
+    .steps{grid-template-columns:1fr;}
+    .hero-ctas{flex-direction:column; align-items:flex-start; gap:18px;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+    .hero-portrait img{transform:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">
+      <img src="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/62194bd30a12a347bd7e1909.png" alt="LSD Marketing">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#problem">The Problem</a></li>
+      <li><a href="#system">The System</a></li>
+      <li><a href="#offers">Offers</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="https://authority.lsdmarketing.com.au/opt-in" class="btn btn-red">Get the Free Authority Audit</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">MENU</button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#problem">The Problem</a>
+  <a href="#system">The System</a>
+  <a href="#offers">Offers</a>
+  <a href="#about">About</a>
+  <a href="https://authority.lsdmarketing.com.au/opt-in" class="btn btn-red">Get the Free Authority Audit</a>
+</div>
+
+<div id="top"></div>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1 class="reveal visible">YOU'RE THE EXPERT.<br>IT'S TIME THE <span class="accent">MARKET</span> KNEW IT.</h1>
+      <p class="hero-sub reveal visible reveal-delay-1">AI-powered authority systems for established experts who are respected offline but invisible online.</p>
+      <div class="hero-ctas reveal visible reveal-delay-2">
+        <a href="https://authority.lsdmarketing.com.au/opt-in" class="btn btn-red">Get Your Free Authority Audit</a>
+        <a href="https://api.productivityhub.tech/widget/booking/AE5RvT81XwsZi8PQ6Kkt" class="text-link" style="color:#fff;">Or book a call &rarr;</a>
+      </div>
+    </div>
+    <div class="hero-portrait reveal visible reveal-delay-1">
+      <div class="frame">
+        <img id="heroPortrait" src="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/6a50441c467229729ef4229d.jpeg" alt="Dave Miller, Authority Architect" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE PROBLEM ================= -->
+<section class="section-light pad" id="problem">
+  <div class="container lines">
+    <span class="eyebrow reveal">The Problem</span>
+    <p class="reveal">You've spent 15+ years mastering your craft.</p>
+    <p class="reveal">Meanwhile someone with a ring light and half your experience owns your market.</p>
+    <p class="reveal">They post daily.</p>
+    <p class="reveal">You barely post at all.</p>
+    <p class="reveal">They look busy.</p>
+    <p class="reveal">You look absent.</p>
+    <p class="emph reveal">Here's the thing.</p>
+    <p class="reveal">The problem isn't your expertise.</p>
+    <p class="final reveal">It's your visibility system.</p>
+  </div>
+</section>
+
+<!-- ================= THE SHIFT ================= -->
+<section class="section-dark pad">
+  <div class="container">
+    <div class="shift-head">
+      <span class="eyebrow reveal">The Shift</span>
+      <h2 class="reveal">AUTHORITY ISN'T BUILT BY CREATING MORE CONTENT.<br>IT'S BUILT BY <span>INSTALLING A SYSTEM.</span></h2>
+      <p class="shift-lead reveal reveal-delay-1">Three AI systems, trained on your expertise, working while you work. We call it the 3-Brain System.</p>
+    </div>
+    <div class="brains reveal reveal-delay-2">
+      <div class="brain">
+        <span class="brain-tag">MARKETING BRAIN</span>
+        <h3>Finds Your Audience</h3>
+        <p>It knows who's looking for you, and it speaks to them like you would.</p>
+      </div>
+      <div class="brain">
+        <span class="brain-tag">CONTENT BRAIN</span>
+        <h3>Builds Your Voice</h3>
+        <p>Turns 15+ years of expertise into content, without you writing a word.</p>
+      </div>
+      <div class="brain">
+        <span class="brain-tag">SALES BRAIN</span>
+        <h3>Books Your Calls</h3>
+        <p>Follows up, qualifies, and gets the right people on your calendar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= THE SYSTEM ================= -->
+<section class="section-light pad" id="system">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:70px;">
+      <span class="eyebrow reveal">The System</span>
+      <h2 class="reveal" style="font-size:clamp(32px,4vw,50px);">FOUR STEPS TO VISIBLE.</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <hr class="rule">
+        <h3>AUDIT</h3>
+        <p>We find out exactly where you're invisible, and why.</p>
+      </div>
+      <div class="step reveal reveal-delay-1">
+        <div class="step-num">02</div>
+        <hr class="rule">
+        <h3>ARCHITECT</h3>
+        <p>We design your 3-Brain system around your expertise.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-num">03</div>
+        <hr class="rule">
+        <h3>AUTOMATE</h3>
+        <p>We build it, so it runs without you.</p>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-num">04</div>
+        <hr class="rule">
+        <h3>AMPLIFY</h3>
+        <p>We scale what works, and cut what doesn't.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= OFFERS ================= -->
+<section class="section-dark pad" id="offers">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:60px;">
+      <span class="eyebrow reveal">The Offers</span>
+      <h2 class="reveal" style="font-size:clamp(32px,4vw,50px);">PICK YOUR STARTING POINT.</h2>
+    </div>
+    <div class="offers-grid">
+      <div class="offer-card reveal">
+        <p class="offer-name">GPT TOOLKIT</p>
+        <p class="offer-price">$297</p>
+        <p class="offer-desc strong">Your AI content foundation. Start here.</p>
+        <a href="https://api.productivityhub.tech/widget/booking/AE5RvT81XwsZi8PQ6Kkt" class="btn btn-outline">Book a Call</a>
+      </div>
+      <div class="offer-card featured reveal reveal-delay-1">
+        <span class="featured-tag">MOST BUILT</span>
+        <p class="offer-name">3-BRAIN SYSTEM BUILD</p>
+        <p class="offer-price">From $5,000</p>
+        <p class="offer-desc strong">Done-for-you AI authority engine.</p>
+        <a href="https://api.productivityhub.tech/widget/booking/AE5RvT81XwsZi8PQ6Kkt" class="btn btn-red">Book a Call</a>
+      </div>
+      <div class="offer-card reveal reveal-delay-2">
+        <p class="offer-name">GPT INTENSIVE</p>
+        <p class="offer-price">From $1,500</p>
+        <p class="offer-desc strong">Hands-on AI implementation, built with you.</p>
+        <a href="https://api.productivityhub.tech/widget/booking/AE5RvT81XwsZi8PQ6Kkt" class="btn btn-outline">Book a Call</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS SLOT — video testimonials coming. Structure layout so this slots in between Offers and About without a rebuild. -->
+<section class="section-light pad testimonials-slot" id="testimonials">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:60px;">
+      <span class="eyebrow">Proof</span>
+      <h2 style="font-size:clamp(32px,4vw,50px);">HEAR FROM THE EXPERTS WE'VE MADE VISIBLE.</h2>
+    </div>
+    <div class="offers-grid">
+      <!-- video testimonial cards go here -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section-light pad" id="about">
+  <div class="container about-grid">
+    <div class="about-photo reveal">
+      <img src="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/6a504682a44b80bde95ff3f2.jpg" alt="Dave Miller" loading="lazy" decoding="async">
+    </div>
+    <div class="about-copy reveal reveal-delay-1">
+      <span class="eyebrow">About Dave</span>
+      <p>I spent decades leading teams in construction — high stakes, no room for fluff.</p>
+      <p>Then I became the invisible expert myself.</p>
+      <p>So I built the system I needed.</p>
+      <p class="final">Now I build authority engines for experts like you.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEAD MAGNET BANNER ================= -->
+<section class="section-red pad">
+  <div class="container banner-grid">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#111;">Free Resource</span>
+      <h2>NOT READY TO TALK?<br>START WITH THE FREE AUTHORITY AUDIT.</h2>
+      <p class="sub">Find out exactly why you're invisible online — and the 3 fastest fixes.</p>
+      <a href="https://authority.lsdmarketing.com.au/opt-in" class="btn btn-white">Get the Free Authority Audit</a>
+    </div>
+    <div class="banner-img reveal reveal-delay-1">
+      <img src="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/6a5045ff48f33735726ae143.jpeg" alt="Free Authority Audit" loading="lazy" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section-light pad">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:60px;">
+      <span class="eyebrow">FAQ</span>
+      <h2 style="font-size:clamp(32px,4vw,50px);">QUESTIONS, ANSWERED.</h2>
+    </div>
+    <div class="faq reveal">
+      <details class="faq-item">
+        <summary>What is a 3-Brain System?<span class="faq-toggle">+</span></summary>
+        <p class="faq-a">A Marketing Brain, a Content Brain, and a Sales Brain — three AI systems trained on your expertise, working together so you don't have to.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I need to be on camera?<span class="faq-toggle">+</span></summary>
+        <p class="faq-a">No. AI avatars are available if you'd rather not appear on camera yourself.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How fast are results?<span class="faq-toggle">+</span></summary>
+        <p class="faq-a">Most experts see measurable movement within 90 days.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Will this work in my industry?<span class="faq-toggle">+</span></summary>
+        <p class="faq-a">If you've got 15+ years of real expertise, yes. The system is built around your knowledge, not a generic template.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do I have to create content myself?<span class="faq-toggle">+</span></summary>
+        <p class="faq-a">No. That's the point.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <img src="https://assets.cdn.filesafe.space/bLj1eU2J7syW8tAl2WB0/media/62194bd30a12a347bd7e1909.png" alt="LSD Marketing" loading="lazy" decoding="async">
+        </div>
+        <p>Transforming Businesses, Empowering Lives with AI.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:dave@lsdmarketing.com.au">dave@lsdmarketing.com.au</a>
+        <a href="tel:0480204124">0480 204 124</a>
+      </div>
+      <div class="footer-col">
+        <h4>Follow</h4>
+        <a href="https://facebook.com/davemiller3737" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://instagram.com/lsd.marketing" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://davemillerai.substack.com" target="_blank" rel="noopener">Substack</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 LSD Marketing. All rights reserved.</p>
+      <a href="https://authority.lsdmarketing.com.au/opt-in" class="btn btn-red">Get the Free Authority Audit</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Mobile menu toggle
+  var navToggle = document.getElementById('navToggle');
+  var mobileMenu = document.getElementById('mobileMenu');
+  navToggle.addEventListener('click', function(){
+    var open = mobileMenu.classList.toggle('open');
+    navToggle.textContent = open ? 'CLOSE' : 'MENU';
+    navToggle.setAttribute('aria-expanded', open);
+  });
+  mobileMenu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobileMenu.classList.remove('open');
+      navToggle.textContent = 'MENU';
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Scroll reveal
+  var revealEls = document.querySelectorAll('.reveal:not(.visible)');
+  if(reduceMotion || !('IntersectionObserver' in window)){
+    revealEls.forEach(function(el){ el.classList.add('visible'); });
+  } else {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15, rootMargin:'0px 0px -60px 0px'});
+    revealEls.forEach(function(el){ observer.observe(el); });
+  }
+
+  // Subtle hero parallax
+  var heroPortrait = document.getElementById('heroPortrait');
+  if(heroPortrait && !reduceMotion && window.innerWidth > 900){
+    var ticking = false;
+    window.addEventListener('scroll', function(){
+      if(!ticking){
+        window.requestAnimationFrame(function(){
+          var y = window.scrollY;
+          if(y < window.innerHeight){
+            heroPortrait.style.transform = 'translateY(' + (y * 0.08) + 'px)';
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, {passive:true});
+  }
+})();
+</script>
+
+</body>
+</html>
